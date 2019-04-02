@@ -38,14 +38,93 @@ Para melhor acompanhamento e uso do adonisjs sugiro que vocês se inscrevam no c
 
 ## Client Rest
 
-Para podermos testar as rotas da aplicação, precisaremos enviar requisições para nossa API, com o navegador isso não é possível, para isso usaremos o [Insomnia](https://insomnia.rest/download/)
+Para podermos testar as rotas da aplicação, precisaremos enviar requisições para nossa API, para isso usaremos o [Insomnia](https://insomnia.rest/download/)
 
 ## Adonis
 
-Como no nosso projeto utilizaremos o Adonisjs como framework, precisamos instala-lo de forma global para podermos usar os comandos no terminal.
+Como no nosso projeto utilizaremos o Adonisjs como framework, precisamos instalá-lo de forma global para que tenhamos acesso aos comandos pelo terminal.
 
 ```
 npm i -g @adonisjs/cli
 ```
 
 Obs: Talvez precise permissão.
+
+## Configurações do Visual Studio Code
+
+### EditorConfig
+
+Instalaremos primeiro o EditorConfig para isso basta irmos nas extensões do vscode apertando `ctrl + shift + x` e buscar por Editor Config deve ser o primeiro, com a cara de um ratinho.
+
+```
+root = true
+
+[*]
+indent_style = space
+indent_size = 2
+charset = utf-8
+trim_trailing_whitespace = true
+insert_final_newline = true
+```
+
+### ESLint e Prettier
+
+Mesma coisa, ir nas extensões e buscar por ESLint e por Prettier, instalar e reiniciar o Vscode
+
+**Daqui pra baixo ignora, coloquei toda minha config aqui, mas ter vários cacarecos e algumas coisas só precisam ser feitas uma vez no projeto todo, então deixa pra fazermos juntos**
+
+abrir as configurações do editor com o atalho `ctrl + ,` no canto superior direito vai ter {}, clicar sobre pra abrir as configurações no modo JSON
+
+```
+{
+  "editor.fontSize": 16,
+  "editor.lineHeight": 24,
+  "editor.fontFamily": "'Fira code', 'monospace', monospace, 'Droid Sans Fallback'",
+  "editor.fontLigatures": true,
+  "workbench.iconTheme": "material-icon-theme",
+  "editor.formatOnSave": true,
+  "editor.rulers": [80, 120],
+  "editor.tabSize": 2,
+  "editor.renderLineHighlight": "gutter",
+  "terminal.integrated.fontSize": 14,
+  "emmet.syntaxProfiles": {
+    "javascript": "jsx"
+  },
+  "emmet.includeLanguages": {
+    "javascript": "javascripreact"
+  },
+  "javascript.updateImportsOnFileMove.enabled": "never",
+  "breadcrumbs.enabled": true,
+  "editor.parameterHints.enabled": false,
+  "prettier.eslintIntegration": true,
+  "window.zoomLevel": 0,
+  "files.associations": {
+    "*.html": "html"
+  },
+  "editor.suggestSelection": "first",
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue"
+}
+```
+
+Eu uso a font fira code com font ligatures pra ficar mais bonito visualmente, caso tenha interesse mais instruções no [git](https://github.com/tonsky/FiraCode/wiki)
+
+Depois do projeto iniciado
+instalar o ESLint no projeto
+``npm install -D eslint```
+npx eslint --init
+selecionar check , find and enforce code style
+use a popular style guide
+standart
+JSON
+
+.eslintRC.json
+automaticamente criado
+
+```
+{
+  "extends: "standard",
+  "globals": {
+    "use": true
+  }
+}
+```
