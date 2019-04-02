@@ -35,3 +35,17 @@ enfim caso tenha interesse link [aqui](https://code.visualstudio.com/)
 #### Básico sobre ES6
 
 Para melhor acompanhamento e uso do adonisjs sugiro que vocês se inscrevam no curso de ES6 da rocketseat [aqui](https://rocketseat.com.br/starter) é grátis.
+
+## Client Rest
+
+Para podermos testar as rotas da aplicação, precisaremos enviar requisições para nossa API, com o navegador isso não é possível, para isso usaremos o [Insomnia](https://insomnia.rest/download/)
+
+## Adonis
+
+Como no nosso projeto utilizaremos o Adonisjs como framework, precisamos instala-lo de forma global para podermos usar os comandos no terminal.
+
+```
+npm i -g @adonisjs/cli
+```
+
+Obs: Talvez precise permissão.
